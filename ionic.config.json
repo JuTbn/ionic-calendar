@@ -1,0 +1,7 @@
+{
+  "name": "ionicCalendar3",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

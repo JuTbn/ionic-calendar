@@ -1,0 +1,33 @@
+<ion-toolbar color="success">
+  <ion-buttons slot="start">
+    <ion-button (click)="close()">
+      <ion-icon name="close" slot="icon-only"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Ajouter une garde</ion-title>
+  <ion-buttons slot="end">
+    <ion-button (click)="save()">
+      <ion-icon name="checkmark" slot="icon-only"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="stacked">Enfant</ion-label>
+    <ion-input tpye="text" [(ngModel)]="event.title" placeholder="Choisir un enfant"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-datetime [(ngModel)]="eventDay" color="success" doneText="OK" cancelText="Cancel" presentation="date" displayFormat="DD/MM/YYYY HH:mm" pickerFormat="MMM DHH:mm" [min]="minDate" ></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Heure de début</ion-label>
+    <ion-input tpye="text" [(ngModel)]="startHour" placeholder="8:00"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Heure de fin</ion-label>
+    <ion-input tpye="text" [(ngModel)]="endHour" placeholder="17:00"></ion-input>
+  </ion-item>
+  
+</ion-content>
